@@ -2,11 +2,20 @@ function SUB_NN_N(A, B) {
 //Вычитание из первого большего натурального числа второго меньшего или равного
 //Пешков Денис, гр. 5301	
 	var C = [];
-	if (COM_NN_D(A, B) == 0) 
-		//первое число меньше втрого
-		C = dif(A, B)
-	else
+	switch (COM_NN_D(A, B)) {
+	case 2:	
+		//A > B
+		C = dif(A, B);
+		break;
+	case 1:
+		//A < B	
 		C = dif(B, A);
+		break;
+	case 0:
+		//A = B	
+		C = 0;
+		break;
+	};
 	return C;
 	
 	function  dif(max, min) {
