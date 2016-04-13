@@ -1,19 +1,20 @@
 function SUB_NN_N(A, B) {
 //Вычитание из первого большего натурального числа второго меньшего или равного
 //Пешков Денис, гр. 5301	
-	var C = [];
+	var C = { d: [], s: 1 };
+	
 	switch (COM_NN_D(A, B)) {
 	case 2:	
 		//A > B
-		C = dif(A, B);
+		C.d = dif(A.d, B.d);
 		break;
 	case 1:
 		//A < B	
-		C = dif(B, A);
+		C.d = dif(B.d, A.d);
 		break;
 	case 0:
 		//A = B	
-		C = 0;
+		C.d = [];
 		break;
 	};
 	return C;
@@ -52,3 +53,4 @@ function SUB_NN_N(A, B) {
 		return res
 	};
 }
+
