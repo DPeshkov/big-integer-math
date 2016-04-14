@@ -20,9 +20,7 @@ function SUB_NN_N(A, B) {
 	return C;
 	
 	function  dif(max, min) {
-		//переворачиваем оба числа
-		max = max.reverse();
-		min = min.reverse();
+		
 		var n = max.length, m = min.length,  res = [];
 		
 		//если мЕньшее число короче бОльшего, дописываем 0		
@@ -41,9 +39,6 @@ function SUB_NN_N(A, B) {
 			res[i] = b % 10; // делением по модулю получаем текущий разряд рез-та
 			c = b / 10 |0;
 		}
-
-		//переворачиваем результат
-		res.reverse()
 
 		// удаляем ведущие нули
 		i=0;
